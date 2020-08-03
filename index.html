@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -20,7 +20,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Vynchronize</title>
+    <title>navve.sync</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +52,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#Home"><img src="img/logo.png" alt="Vynchronize logo" height="40" width="40"> Vynchronize</a>
+            <a class="navbar-brand js-scroll-trigger" href="#Home"><img src="img/logo.png" alt="Vynchronize logo" height="40" width="40"> navve.sync</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -64,13 +64,13 @@
               </a>
             </li> -->
                     <li class="nav-item">
-                        <a id="chat-nav" class="nav-link js-scroll-trigger hide" href="#messageArea">Chatroom</a>
+                        <a id="chat-nav" class="nav-link js-scroll-trigger hide" href="#messageArea">Chat ao vivo</a>
                     </li>
                     <li class="nav-item">
-                        <a id="about-nav" class="nav-link js-scroll-trigger hide" href="#about">About</a>
+                        <a id="about-nav" class="nav-link js-scroll-trigger hide" href="#about">sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a id="contact-nav" class="nav-link js-scroll-trigger hide" href="#contact">Contact</a>
+                        <a id="contact-nav" class="nav-link js-scroll-trigger hide" href="#contact">Contato</a>
                     </li>
                     <li class="nav-item">
                         <a target="_blank" rel="noopener noreferrer" class="nav-link js-scroll-trigger" href="https://www.facebook.com/vynchronize">
@@ -98,20 +98,20 @@
         <div id="userFormArea" class="row">
             <div class="col-md-12">
                 <!-- ADD DESCRIPTION HERE -->
-                <h2>Welcome to Vynchronize</h2>
-                <p class="lead">The hot new video synchronization platform used to watch videos in realtime with friends!</p>
+                <h2>Bem Vindo ao Navve.sync</h2>
+                <p class="lead">Plataforma de sincronização usada para assistir vídeos em tempo real com os amigos!</p>
                 <hr style="height:20pt; visibility:hidden;" />
 
-                <h2> Join a Room! </h2>
+                <h2> Entre na sala. </h2>
                 <form id="userForm">
                     <div class="form-group">
                         <p style="color:red; margin-bottom: 0px" id="missinginfo"></p>
-                        <label>Enter Name</label>
+                        <label>Insira seu Nome</label>
                         <input class="form-control" id="username" />
                         <br />
                         <p style="color:red; margin-bottom: 0px" id="missinginfo2"></p>
-                        <label>Enter Room ID (Default 1)</label>
-                        <button type="button" onClick="randomroom()" class="btn btn-primary random">Random</button>
+                        <label>Insira Room ID (padrão 1)</label>
+                        <button type="button" onClick="randomroom()" class="btn btn-primary random">Aleatório</button>
                         <br/>
                         <input class="form-control" id="roomnum" />
                         <br/>
@@ -128,8 +128,8 @@
             <div class="row my-4" style="margin-top: 0px !important;">
                 <div class="col-lg-7">
 
-                    <div class="nonmobile-hide"><b>Note: </b>Only the host can control the video using the native video player controls </div>
-                    <div class="mobile-hide"><b>Mobile User</b>, please play the video once manually to give the browser permission to control the video player. </div>
+                    <div class="nonmobile-hide"><b>Nota: </b>Somente o host pode controlar o vídeo usando os controles nativos do player de vídeo </div>
+                    <div class="mobile-hide"><b>Celular</b>, reproduza o vídeo uma vez manualmente para dar permissão ao navegador para controlar o player de vídeo. </div>
                     <!-- <hr style="height:0pt; visibility:hidden;" /> -->
 
                     <div style="margin: 10px" class="dropdown">
@@ -140,7 +140,7 @@
                             <a class="dropdown-item" onclick="changePlayer(roomnum, 0)"><i class="fab fa-youtube"></i> YouTube</a>
                             <a class="dropdown-item" onclick="changePlayer(roomnum, 1)"><img width="14px" height="14px" src="img/dailymotion-logo.svg" alt="Daily Motion Logo"> Daily Motion</a>
                             <a class="dropdown-item" onclick="changePlayer(roomnum, 2)"><i class="fab fa-vimeo"></i> Vimeo</a>
-                            <a class="dropdown-item" onclick="changePlayer(roomnum, 3)"><i class="fas fa-file-video"></i> HTML5 Player (.mp4/.webm) (Beta)</a>
+                            <a class="dropdown-item" onclick="changePlayer(roomnum, 3)"><i class="fas fa-file-video"></i> HTML5 Player (.mp4/.webm)</a>
                         </div>
                     </div>
 
@@ -150,12 +150,12 @@
 
                     <!-- INVITE MOVED TO MODAL -->
                     <!-- <p id="invite">Invite a friend! Send them the link: vynchronize.herokuapp.com/ROOMNUM</p> -->
-                    <h2><span id="hostlabel" class="label label-default"><i class="fas fa-user"></i> Current Host: Kyle </span></h2>
+                    <h2><span id="hostlabel" class="label label-default"><i class="fas fa-user"></i> Host atual:  </span></h2>
 
                     <!----------------------------------- PLAYER AREA ----------------------------------->
 
                     <div id='playerArea'>
-                        <div class="video" id="player"></div>
+                        <div class="video" id="player" ></div>
                         <!-- <iframe class="video" id="player" allowfullscreen="0" rel="0" width="640" height="360" src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1" frameborder="1" style="border: solid 4px #37474F"></iframe> -->
                     </div>
                     <div id='dailyArea'>
@@ -166,7 +166,7 @@
                     </div>
                     <div id='HTML5Area'>
                         <div class="html5player">
-                            <video src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" width="640" height="360" class="video html5video" id="html5src" controls>
+                            <video src="https://r6---sn-oxunxg8pjvn-bpbe.googlevideo.com/videoplayback?expire=1596259670&ei=1owkX6uVDuGe7gKU84vgCw&ip=201.17.127.98&id=59ddf067a7d00d9f&itag=18&source=blogger&mh=1L&mm=31&mn=sn-oxunxg8pjvn-bpbe&ms=au&mv=m&mvi=6&pcm2cms=yes&pl=24&susc=bl&mime=video/mp4&dur=1271.153&lmt=1493762711458527&mt=1596230790&sparams=expire,ei,ip,id,itag,source,susc,mime,dur,lmt&sig=AOq0QJ8wRAIgcHsMZb9m85ctNr_b5duCB-d3rTF1IIKyzXP2EYq2ewYCICvb7bAfzZpChKTKIj9OkJC01hot_1MPK9a9HNeGO9vt&lsparams=mh,mm,mn,ms,mv,mvi,pcm2cms,pl&lsig=AG3C_xAwRQIhAPu1TZolhW0hB36VHf57PB0YrSpzMUbFZGE4tEnx5Aa1AiBW2wdtvS3cBpYq4ghTARnLOC6VBDNjUq1vez0TXAfR8Q%3D%3D&cpn=ViMSZO_PFHvKNxJ-&c=WEB_EMBEDDED_PLAYER&cver=20200731"  width="640" height="360" class="video html5video" id="html5src" controls>
                             <!-- <source src="video/sintel-short.mp4" type="video/mp4">
                             <source src="video/sintel-short.webm" type="video/webm"> -->
                             <!-- fallback content here -->
@@ -181,9 +181,9 @@
 
                         <button id="syncbutton" onclick="syncVideo(roomnum);syncAlert()" style="margin-top:.5rem" class="btn btn-primary"><i class="fa fa-sync"></i> Sync</button>
 
-                        <button id="loveButton" onclick="loveLive(roomnum)" style="margin-top:.5rem" class="btn btn-primary"><i class="far fa-heart"></i> Random K-pop</button>
+                      
                         <!-- <br/> -->
-                        <button id="hostbutton" onclick="changeHost(roomnum)" style="margin-top:.5rem" class="btn btn-primary"><i class="fas fa-users"></i> Make me the host!</button>
+                        <button id="hostbutton" onclick="changeHost(roomnum)" style="margin-top:.5rem" class="btn btn-primary"><i class="fas fa-users"></i> Faça de mim o anfitrião!</button>
                         <!-- Turn off the lights -->
                         <button id="lightButton" style="margin-top:.5rem" class="btn btn-primary switch"><i style="pointer-events:none;" class="fas fa-lightbulb"></i></button>
                     </div>
@@ -193,14 +193,14 @@
 
                     <div class="topbotmargins">
                         <input type="Video" style="max-width: 200px; margin-right: .5rem; margin-bottom: .5rem; float: left;" class="form-control" id="inputVideoId" placeholder="Video ID / URL">
-                        <button id="enqueueButton" onclick="enqueueVideoParse(roomnum)" class="btn btn-primary"><i class="fas fa-plus"></i> Add to Queue</button>
-                        <button id="emptyButton" onclick="emptyQueue(roomnum)" class="btn btn-primary"><i class="fas fa-trash"></i> Empty Queue</button>
+                        <button id="enqueueButton" onclick="enqueueVideoParse(roomnum)" class="btn btn-primary"><i class="fas fa-plus"></i> Adicionar à lista</button>
+                        <button id="emptyButton" onclick="emptyQueue(roomnum)" class="btn btn-primary"><i class="fas fa-trash"></i> Limpar a lista</button>
                     </div>
                     <div>
                         <!-- <a class="ghost-button-full-color"><i class="far fa-times-circle"></i></a> -->
-                        <button id="changeButton" onclick="changeVideoParse(roomnum)" class="btn btn-primary"><i class="fas fa-exchange-alt"></i> Change Video</button>
-                        <button id="previousButton" onclick="prevVideo(roomnum)" class="btn btn-primary"><i class="fas fa-step-backward"></i> Previous</button>
-                        <button id="nextButton" onclick="playNext(roomnum)" class="btn btn-primary"><i class="fas fa-step-forward"></i> Next</button>
+                        <button id="changeButton" onclick="changeVideoParse(roomnum)" class="btn btn-primary"><i class="fas fa-exchange-alt"></i> Alterar vídeo</button>
+                        <button id="previousButton" onclick="prevVideo(roomnum)" class="btn btn-primary"><i class="fas fa-step-backward"></i> Anterior</button>
+                        <button id="nextButton" onclick="playNext(roomnum)" class="btn btn-primary"><i class="fas fa-step-forward"></i> Próximo</button>
 
                         <br/>
 
@@ -235,7 +235,7 @@
                     <!-- <input type="Video" style="max-width: 200px; margin-right: .5rem; margin-bottom: .5rem; float: left;" class="form-control" id="inputVideoURL" placeholder="Direct URL to .mp4/.webm"> -->
 
                     <!-- <p style="display: none" id="html5-message" class="lead">Video File Upload Not Yet Supported</p> -->
-                    <p style="display: none" id="beta-message" class="lead">Queue is currently only supported by YouTube</p>
+                    <p style="display: none" id="beta-message" class="lead">No momento, a fila é suportada apenas pelo YouTube</p>
 
 
 
@@ -245,7 +245,7 @@
                 <div class="col-lg-5">
                     <!-- <div class="col-md-4"> -->
                     <!-- <div id="onlineArea" class="row"> -->
-                    <h5 class="right-header">Online Users</h5>
+                    <h5 class="right-header">Usuários online</h5>
                     <hr style="height:0pt; visibility:hidden;" />
 
                     <!-- <br/> -->
@@ -255,10 +255,10 @@
                         </div>
 
                         <!-- Trigger the modal with a button -->
-                        <button style="background-color: #007bff" type="button" class="nonmobile-hide btn btn-info btn-sm invite-button" data-toggle="modal" data-target="#inviteModal"><i style="width: 30px; height: 30px;" class="fas fa-user-plus"></i><br><h5>Invite</h5></button>
+                        <button style="background-color: #007bff" type="button" class="nonmobile-hide btn btn-info btn-sm invite-button" data-toggle="modal" data-target="#inviteModal"><i style="width: 30px; height: 30px;" class="fas fa-user-plus"></i><br><h5>Convite</h5></button>
                     </div>
                     <hr style="height:0pt; visibility:hidden;" />
-                    <h5 style="color:gray;">Chatroom</h5>
+                    <h5 style="color:gray;">Sala de bate-papo</h5>
 
                     <!-- Modal -->
                     <div id="inviteModal" class="modal fade" role="dialog">
@@ -267,19 +267,19 @@
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title">Invite a Friend</h4>
+                                    <h4 class="modal-title">Convidar um amigo</h4>
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Send a friend your unique room link so they can watch videos too!</p>
+                                    <p>Envie a um amigo o link do sua sala exclusiva para que ele também possam assistir os vídeos</p>
                                     <!-- <p style="text-align: center;" id="invite">vynchronize.herokuapp.com/ROOMNUM</p> -->
                                     <input class="inv_input" id="inv_input" type="text" value="vynchronize.herokuapp.com/ROOMNUM" class="field left" readonly>
                                 </div>
                                 <div class="modal-footer">
                                     <div style="opacity: 1" class="tooltip">
-                                        <button type="button" class="btn btn-default" onclick="copyInvite()" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span><i class="fas fa-clipboard"></i> Copy to Clipboard</button>
+                                        <button type="button" class="btn btn-default" onclick="copyInvite()" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip">Copiar para área de transferência</span><i class="fas fa-clipboard"></i> Copy to Clipboard</button>
                                     </div>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
 
@@ -298,7 +298,7 @@
                                 <div class="form-group">
                                     <br/>
                                     <!-- <label>Enter Message...</label> -->
-                                    <input class="form-control chat-form" id="message" placeholder="Enter Message..." />
+                                    <input class="form-control chat-form" id="message" placeholder="Inserir mensagem ..." />
                                     <!-- <textarea class="form-control" id="message"></textarea> -->
                                     <br />
                                     <!-- <input type="submit" class="btn btn-primary" value="Send Message" /> -->
@@ -313,13 +313,13 @@
 
             <!-- /.row -->
 
-            <!-- Call to Action Well -->
+            <!-- Call to Action Well 
             <div class="card text-white bg-secondary my-4 text-center">
                 <div class="card-body">
                     <p class="text-white m-0">*The synchronization may not be perfect! It's a work in progress, submit an issue on github if you wish to submit a bug report/suggestion.</p>
                 </div>
             </div>
-
+-->
             <!-- Content Row -->
             <!-- <div class="row">
         <div class="col-md-4 mb-4">
@@ -363,7 +363,7 @@
             <!-- /.row -->
 
             <!-- <hr style="height:20pt; visibility:hidden;" /> -->
-            <section id="about" class="bg-light">
+        <!--     <section id="about" class="bg-light">
                 <hr style="height:100pt; visibility:hidden;" />
 
                 <div class="container">
@@ -400,6 +400,7 @@
                     </div>
                 </div>
             </section>
+            -->
             <hr style="height:50pt; visibility:hidden;" />
 
         </div>
@@ -409,7 +410,7 @@
     <!-- Footer -->
     <footer id="footer" class="py-5 bg-dark footer">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Vynchronize 2018</p>
+            <p class="m-0 text-center text-white">&copy; navve.sync 2020</p>
         </div>
         <!-- /.container -->
     </footer>
@@ -499,7 +500,7 @@
                 if ($username.val() == "") {
                     console.log("ENTER A NAME")
                     var noname = document.getElementById('missinginfo')
-                    noname.innerHTML = "Surely you have a name right? Enter it below!"
+                    noname.innerHTML = "Certamente você tem um nome certo? Digite abaixo =)"
                 }
                 // If name is too long
                 else if ($username.val().length > 30) {
@@ -520,7 +521,7 @@
                     var noname = document.getElementById('missinginfo')
                     noname.innerHTML = ""
                     var noname2 = document.getElementById('missinginfo2')
-                    noname2.innerHTML = "Please enter a room ID without symbols or leading/trailing whitespace!"
+                    noname2.innerHTML = "Digite um ID da sala sem símbolos ou espaços em branco."
                 } else {
                     username = $username.val()
                     socket.emit('new user', $username.val(), function(data) {
