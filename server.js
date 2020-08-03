@@ -176,16 +176,16 @@ io.sockets.on('connection', function(socket) {
             io.sockets.adapter.rooms['room-' + socket.roomnum].currPlayer = 0
             // Default video
             io.sockets.adapter.rooms['room-' + socket.roomnum].currVideo = {
-                yt: 'M7lc1UVf-VE',
+                yt: 'aAQg_3qO3Pg',
                 dm: 'x26m1j4',
                 vimeo: '76979871',
-                html5: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+                html5: 'https://r6---sn-oxunxg8pjvn-bpbe.googlevideo.com/videoplayback?expire=1596259670&ei=1owkX6uVDuGe7gKU84vgCw&ip=201.17.127.98&id=59ddf067a7d00d9f&itag=18&source=blogger&mh=1L&mm=31&mn=sn-oxunxg8pjvn-bpbe&ms=au&mv=m&mvi=6&pcm2cms=yes&pl=24&susc=bl&mime=video/mp4&dur=1271.153&lmt=1493762711458527&mt=1596230790&sparams=expire,ei,ip,id,itag,source,susc,mime,dur,lmt&sig=AOq0QJ8wRAIgcHsMZb9m85ctNr_b5duCB-d3rTF1IIKyzXP2EYq2ewYCICvb7bAfzZpChKTKIj9OkJC01hot_1MPK9a9HNeGO9vt&lsparams=mh,mm,mn,ms,mv,mvi,pcm2cms,pl&lsig=AG3C_xAwRQIhAPu1TZolhW0hB36VHf57PB0YrSpzMUbFZGE4tEnx5Aa1AiBW2wdtvS3cBpYq4ghTARnLOC6VBDNjUq1vez0TXAfR8Q%3D%3D&cpn=ViMSZO_PFHvKNxJ-&c=WEB_EMBEDDED_PLAYER&cver=20200731'
             }
             // Previous Video
             io.sockets.adapter.rooms['room-' + socket.roomnum].prevVideo = {
                 yt: {
-                    id: 'M7lc1UVf-VE',
-                    time: 0
+                    id: 'aAQg_3qO3Pg',
+                    time: 3191
                 },
                 dm: {
                     id: 'x26m1j4',
@@ -196,7 +196,7 @@ io.sockets.on('connection', function(socket) {
                     time: 0
                 },
                 html5: {
-                    id: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+                    id: 'https://r6---sn-oxunxg8pjvn-bpbe.googlevideo.com/videoplayback?expire=1596259670&ei=1owkX6uVDuGe7gKU84vgCw&ip=201.17.127.98&id=59ddf067a7d00d9f&itag=18&source=blogger&mh=1L&mm=31&mn=sn-oxunxg8pjvn-bpbe&ms=au&mv=m&mvi=6&pcm2cms=yes&pl=24&susc=bl&mime=video/mp4&dur=1271.153&lmt=1493762711458527&mt=1596230790&sparams=expire,ei,ip,id,itag,source,susc,mime,dur,lmt&sig=AOq0QJ8wRAIgcHsMZb9m85ctNr_b5duCB-d3rTF1IIKyzXP2EYq2ewYCICvb7bAfzZpChKTKIj9OkJC01hot_1MPK9a9HNeGO9vt&lsparams=mh,mm,mn,ms,mv,mvi,pcm2cms,pl&lsig=AG3C_xAwRQIhAPu1TZolhW0hB36VHf57PB0YrSpzMUbFZGE4tEnx5Aa1AiBW2wdtvS3cBpYq4ghTARnLOC6VBDNjUq1vez0TXAfR8Q%3D%3D&cpn=ViMSZO_PFHvKNxJ-&c=WEB_EMBEDDED_PLAYER&cver=20200731',
                     time: 0
                 }
             }
